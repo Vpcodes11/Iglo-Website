@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.captures/
+
+# Local screenshots and recordings from visual checks.
+/*.png
+/*.jpg
+/*.gif
+/*.mp4
+
+# Local environment and editor files.
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

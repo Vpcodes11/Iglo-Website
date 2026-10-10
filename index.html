@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#a8b1c0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="Nival is an imaginary expedition studio exploring the space between nature, technology and wonder." />
+    <title>NIVAL — An imagined expedition</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="scene" aria-hidden="true"></div>
+      <div id="fallback" role="img" aria-label="An igloo stands in a snowy landscape" hidden>
+        <div class="fallback-orb"></div>
+        <svg class="fallback-igloo" viewBox="0 0 500 330" aria-hidden="true">
+          <defs><linearGradient id="ice" x2="1" y2="1"><stop stop-color="#e9eff5"/><stop offset="1" stop-color="#8b95a5"/></linearGradient></defs>
+          <path d="M55 280V220C55 0 425 0 425 220V280Z" fill="url(#ice)" stroke="#a9b2bf" stroke-width="4"/>
+          <g fill="none" stroke="#687688" stroke-width="4" opacity=".6"><path d="M61 220H421M76 167H405M112 114H370M168 70H314M130 220V280M224 220V280M330 220V280M95 167V220M185 167V220M281 167V220M377 167V220M144 114V167M240 114V167M337 114V167M196 70V114M287 70V114"/></g>
+          <path d="M278 292V217C278 119 418 119 418 217V292Z" fill="url(#ice)" stroke="#bac5d2" stroke-width="5"/>
+          <path d="M310 292V217C310 162 386 162 386 217V292Z" fill="#566377"/>
+          <path d="M292 172L317 191M347 148V175M401 174L382 193" stroke="#8794a8" stroke-width="4"/>
+        </svg>
+      </div>
+      <div id="loader" role="status" aria-label="Loading Nival" aria-live="polite">
+        <canvas id="loading-readings" aria-hidden="true"></canvas>
+        <span id="loading-signal" aria-hidden="true">----=++=----</span>
+        <span id="loading-status" class="sr-only">Preparing the experience.</span>
+      </div>
+
+      <header class="site-header">
+        <div class="brand-block">
+          <a href="#home" class="wordmark" id="home-link" aria-label="Nival, return to beginning">NIVAL</a>
+          <p class="copyright">// Copyright © 2026</p>
+          <p class="brand-note">Nival Studio.<br />An imagined expedition.</p>
+        </div>
+        <div class="manifesto" id="manifesto">
+          <p class="eyebrow">////// Manifesto</p>
+          <p>We build a signal for the curious — a place where wild landscapes, quiet technology and human imagination meet.</p>
+        </div>
+      </header>
+
+      <div id="telemetry" class="telemetry" aria-hidden="true">
+        <svg viewBox="0 0 340 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M44 169L129 55L194 170L275 103" stroke="white" stroke-width=".8" opacity=".8" />
+          <path d="M129 55L275 103M44 169L194 170" stroke="white" stroke-width=".5" opacity=".5" />
+          <path d="M40 169H48M44 165V173M125 55H133M129 51V59M190 170H198M194 166V174M271 103H279M275 99V107" stroke="white" stroke-width=".8" />
+          <text x="27" y="157">07</text><text x="115" y="42">48</text><text x="180" y="188">23</text><text x="282" y="96">91</text>
+        </svg>
+      </div>
+
+      <main class="sr-only">
+        <h1>Nival — An imagined expedition</h1>
+        <p>An interactive ice shelter in an arctic landscape. The opening sequence scans the shelter before revealing the landscape. Press Escape to skip the introduction. Hover over a brick to lift it; surrounding bricks lift and turn with a gradually smaller response, while distant bricks stay in place. Move off the brick to let it settle back into the igloo. Scroll to change your viewpoint. Use Page Down and Page Up, or Home to return to the beginning. Press P to pause or resume cursor response and snowfall.</p>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-left">
+          <p id="scroll-prompt">Scroll down to<br />discover.</p>
+          <button id="sound-toggle" class="sound-toggle" type="button" aria-label="Turn ambient sound on" aria-pressed="false"><span class="sound-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 7h3l4-4v14l-4-4H3zM14 7l4 6m0-6-4 6"/></svg></span> Sound: <span id="sound-state">Off</span></button>
+        </div>
+      </footer>
+      <div class="grain" aria-hidden="true"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
